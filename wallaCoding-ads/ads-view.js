@@ -1,8 +1,9 @@
 
 export function buildAd(ad){
     return `
-    <span>${ad.name}</span>
-    <span>Creado por: ${ad.handler}</span>
+    <p>${ad.name}</p>
+    <p>Creado por: ${ad.handler}</p>
+    <br>
     <img src="${ad.photo}"></img>
     <p>${ad.description}</p>
     <p>${ad.price}</p>
