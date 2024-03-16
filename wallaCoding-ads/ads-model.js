@@ -1,10 +1,12 @@
 function parseAds(data) {
     return data.map(data => ({
       handler: data.author,
-      date: new Date().toISOString(),
-      message: data.message,
-      likes: data.likes.length,
       id: data.id,
+      name: data.name,
+      description: data.description,
+      price: data.price,
+      buy: data.buy,
+      photo: data.photo      
     }))
   }
 
@@ -17,6 +19,7 @@ export async function getAds(){
         const response = await fetch(url);
         const data = await response.json();
         ads=parseAds(data);
+        return ads;
     } catch (error) {
         throw new Error('Hay un error al obtener los anuncios');
     }
