@@ -1,10 +1,11 @@
 import { getAds } from "./ads-model.js";
 import { buildAd } from "./ads-view.js";
 
-const adsList = document.querySelector('.ads-list ');
-const ads = await getAds();
 
-function renderAds(ads, adsList){
+
+
+export async function renderAds(adsList){
+    const ads = await getAds();
         ads.forEach(ad => {
         const adItem=document.createElement('div');
         adItem.className='contenedor-ad';
@@ -13,4 +14,4 @@ function renderAds(ads, adsList){
     })
 };
 
-renderAds(ads,adsList);
+
