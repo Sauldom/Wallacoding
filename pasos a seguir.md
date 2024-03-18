@@ -18,5 +18,15 @@ la paginacion y ordenacion habria que leerse la docu de sparrest
 
 Los endpoints son URLs específicas que representan recursos o funciones disponibles en un servicio web o API (Interfaz de Programación de Aplicaciones), endpoints privados y publicos dale una vuelta
 
-el controlador es la unica pieza de js que tiene que acceder al dom
+cremos un mvc de los anuncios
+creamos unos anuncios en la base de datos
+comprobamos su funcionamiento
 
+creamos un main js donde lo linkamos al html para que inicie los controladores
+en principio solo el ads controller
+
+preguntar a eduardo sobre el true o false con un operador ternario
+
+acordarse que una referencia a una funcions ehace sin los parentesis que seria
+ejecutar esa funcion
+renombra las variables con f2 y te las cambia en todo el documento
