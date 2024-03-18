@@ -6,7 +6,11 @@ export function notificationController(notificationContainer){
         const notification = document.createElement('div');
         notification.innerHTML = buildNotificacion(message);
         notificationContainer.appendChild(notification);
+
+        setTimeout(()=>{
+            notification.remove()
+        },5000);
     }
-    return showNotificacion
+    return {showNotificacion}
 }
 

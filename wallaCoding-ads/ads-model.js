@@ -12,7 +12,7 @@ function parseAds(data) {
 
 
 export async function getAds(){
-    const url = "http://localhost:8000/api/ads";
+    const url = "http://localhost:8000/ai/ads";
     let ads=[];
 
     try {

@@ -7,7 +7,8 @@ import { buildAd } from "./ads-view.js";
 export async function renderAds(adsList){
     const spinner = adsList.querySelector('.lds-ellipsis');
     spinner.classList.toggle('hidden');
-    const ads = await getAds();
+    try {
+        const ads = await getAds();
 
     ads.forEach(ad => {
         const adItem=document.createElement('div');
@@ -15,7 +16,20 @@ export async function renderAds(adsList){
         adItem.innerHTML = buildAd(ad);
         adsList.appendChild(adItem);
     })
+    } catch (error) {
+        dispatchErrorEvent(error, adsList);
+    }
+    
     //spinner.classList.toggle('hidden');
 };
+
+function dispatchErrorEvent(errorMessage, adsList){
+    const event = new CustomEvent('error',{
+        detail:{
+            message:errorMessage
+        }
+    });
+    adsList.dispatchEvent(event);
+}
 
 
