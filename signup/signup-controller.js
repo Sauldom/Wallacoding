@@ -21,7 +21,7 @@ function validatePass(signUpForm){
     
 }
 
-function createOrNotCreateUser(signUpForm){
+async function createOrNotCreateUser(signUpForm){
     let errors=[];        
         
         if(!validateEmail(signUpForm)){
@@ -36,7 +36,10 @@ function createOrNotCreateUser(signUpForm){
         })
 
         if (errors.length ===0){
-            createUser(email.value, password.value);
+            await createUser(email.value, password.value);
             alert('Usuario creado correctamente');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+              }, 4000);
         }
 }
