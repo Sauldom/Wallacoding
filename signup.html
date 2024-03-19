@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+  <script type="module" src="signup.js"></script>
+    <h1>Bienvenido al formulario de registro de Usuario en Wallacoding</h1>
+    <section class="notifications"></section>
+    <form id="register-form">
+        
+        <label for="email">Email</label>
+        <input type="text" id="email" required />
+  
+        <br />
+        <br />
+        <label for="password">password</label>
+        <input type="password" id="password" required minlength="6" />
+  
+        <br />
+        <br />
+        <label for="password-confirmation">Confirma password</label>
+        <input
+          type="password"
+          id="password-confirmation"
+          required
+          minlength="6"
+        />
+  
+        <br />
+        <br />
+        <button type="submit">Registrarse</button>
+      </form>
+</body>
+</html>

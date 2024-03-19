@@ -30,3 +30,10 @@ preguntar a eduardo sobre el true o false con un operador ternario
 acordarse que una referencia a una funcions ehace sin los parentesis que seria
 ejecutar esa funcion
 renombra las variables con f2 y te las cambia en todo el documento
+
+a la hora de implementar el controlador de notificaciones me decia que no era una funcion cuando parecia
+que estaba todo bien
+pues resulta que el return de notificacition controller no tenia una letra igual que la funcion
+que retornabamos
+
+en este paso de momento funcionan las notificaciones y se ven los anuncios
