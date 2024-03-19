@@ -37,3 +37,23 @@ pues resulta que el return de notificacition controller no tenia una letra igual
 que retornabamos
 
 en este paso de momento funcionan las notificaciones y se ven los anuncios
+
+
+nos metemos con el registro de usuarios creamos un archivo html de sign up
+de momento no le hemos puesto ningun enlace al main sino el html solo
+creamos un archivo signup.js que es el que se encarga del nodo y lo envia al controlador
+
+creamos un controlador y un modelo
+en el html creamos un formulario y luego lo validamos en el controlador
+
+la parte importante del modelo es conseguir los datos que lo hacemos con la expresion
+const response = await fetch('http://localhost:8000/auth/register', {
+      method: "POST",
+      body: JSON.stringify({ username: email, password: password }),
+      headers: {
+        'Content-type': "application/json"
+      }
+    });
+un fetch que le decimos el metodo, en el body lo que queremos y los headers para que sepa
+que tipo de contenido es
+asi que primero validamos todos los datos del formulario y luego ya lo enviamos con el modelo
