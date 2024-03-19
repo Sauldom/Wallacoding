@@ -4,7 +4,25 @@ export function signUpController(signUpForm){
 
     signUpForm.addEventListener('submit',(event)=>{
         event.preventDefault();
-        let errors=[];        
+        createOrNotCreateUser(signUpForm)
+})
+}
+
+function validateEmail(signUpForm){
+    const email= signUpForm.querySelector('#email');
+    const emailRegExp = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+        return emailRegExp.test(email.value)
+}            
+
+function validatePass(signUpForm){
+    const password =  signUpForm.querySelector('#password');
+    const passwordConfirm = signUpForm.querySelector('#password-confirmation');
+    return password.value === passwordConfirm.value
+    
+}
+
+function createOrNotCreateUser(signUpForm){
+    let errors=[];        
         
         if(!validateEmail(signUpForm)){
             errors.push('El mail tiene un formato incorrecto')
@@ -21,18 +39,4 @@ export function signUpController(signUpForm){
             createUser(email.value, password.value);
             alert('Usuario creado correctamente');
         }
-})
-}
-
-function validateEmail(signUpForm){
-    const email= signUpForm.querySelector('#email');
-    const emailRegExp = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-        return emailRegExp.test(email.value)
-}            
-
-function validatePass(signUpForm){
-    const password =  signUpForm.querySelector('#password');
-    const passwordConfirm = signUpForm.querySelector('#password-confirmation');
-    return password.value === passwordConfirm.value
-    
 }
