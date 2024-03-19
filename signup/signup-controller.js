@@ -4,17 +4,12 @@ export function signUpController(signUpForm){
 
     signUpForm.addEventListener('submit',(event)=>{
         event.preventDefault();
-        let errors=[];
-
-        const email= signUpForm.querySelector('#email');
-        const password =  signUpForm.querySelector('#password');
-        const passwordConfirm = signUpForm.querySelector('#password-confirmation');
+        let errors=[];        
         
-        const emailRegExp = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-        if(!emailRegExp.test(email.value)){
+        if(!validateEmail(signUpForm)){
             errors.push('El mail tiene un formato incorrecto')
         }
-        if(password.value !== passwordConfirm.value){
+        if(!validatePass(signUpForm)){
             errors.push('Las contraseñas no coinciden')
         }
         
@@ -27,4 +22,17 @@ export function signUpController(signUpForm){
             alert('Usuario creado correctamente');
         }
 })
+}
+
+function validateEmail(signUpForm){
+    const email= signUpForm.querySelector('#email');
+    const emailRegExp = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+        return emailRegExp.test(email.value)
+}            
+
+function validatePass(signUpForm){
+    const password =  signUpForm.querySelector('#password');
+    const passwordConfirm = signUpForm.querySelector('#password-confirmation');
+    return password.value === passwordConfirm.value
+    
 }
