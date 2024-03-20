@@ -57,3 +57,9 @@ const response = await fetch('http://localhost:8000/auth/register', {
 un fetch que le decimos el metodo, en el body lo que queremos y los headers para que sepa
 que tipo de contenido es
 asi que primero validamos todos los datos del formulario y luego ya lo enviamos con el modelo
+
+creamos una pagina de registro de usuarios con sus validacions
+
+creamos una pagina de login de usuarios
+
+document.addEventListener('DOMContentLoaded' accedemos al DOm cuando ya estan todos los contenidos cargados

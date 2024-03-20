@@ -1,3 +1,4 @@
+import { triggerEvent } from "../util/triggerEvent.js";
 import { getAds } from "./ads-model.js";
 import { buildAd } from "./ads-view.js";
 
@@ -16,20 +17,16 @@ export async function renderAds(adsList){
         adItem.innerHTML = buildAd(ad);
         adsList.appendChild(adItem);
     })
-    } catch (error) {
-        dispatchErrorEvent(error, adsList);
+    } catch (errorMes) {
+        triggerEvent('error-loading-ads', {            
+                message:errorMes,
+                type:'error'            
+        },adsList)
     }
     
     //spinner.classList.toggle('hidden');
 };
 
-function dispatchErrorEvent(errorMessage, adsList){
-    const event = new CustomEvent('error',{
-        detail:{
-            message:errorMessage
-        }
-    });
-    adsList.dispatchEvent(event);
-}
+
 
 

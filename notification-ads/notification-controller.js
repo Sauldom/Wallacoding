@@ -4,7 +4,9 @@ export function notificationController(notificationContainer){
 
     function showNotification(message){
         const notification = document.createElement('div');
+        notification.classList.add('notification', type)
         notification.innerHTML = buildNotificacion(message);
+
         notificationContainer.appendChild(notification);
 
         setTimeout(()=>{
