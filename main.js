@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   const { showNotification }  = notificationController(adsNotifications);
 
-  adsList.addEventListener('error', (event)=>{
+  adsList.addEventListener('error loading ads', (event)=>{
       console.log(event);
       showNotification (event.detail.message);
       

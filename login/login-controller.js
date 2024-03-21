@@ -15,13 +15,16 @@ async function handleUser (loginForm){
     const email = loginForm.querySelector ('#email');
     const password = loginForm.querySelector ('#password');
     try{
-        dispatchEvent('startLoginUser', null, loginForm)
+        
         const jwtToken = await loginUser(email.value, password.value);
-        alert('ok');
-        localStorage.setItem('token', jwt);
+        alert('Usuario Creado')        
+        localStorage.setItem('token', jwtToken);
+       
         window.location="./index.html";
     } catch(error){
-        alert(error) 
+        triggerEvent('login-error',{
+            message:error
+        },loginForm) 
     }finally{
         triggerEvent('finishLog', null, loginForm)
     }

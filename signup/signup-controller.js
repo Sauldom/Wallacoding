@@ -1,3 +1,4 @@
+import { triggerEvent } from "../util/triggerEvent.js";
 import { createUser} from "./signup-model.js";
 
 export function signUpController(signUpForm){
@@ -32,14 +33,25 @@ async function createOrNotCreateUser(signUpForm){
         }
         
         errors.forEach(error=>{
-            alert(error);
+            triggerEvent('signup-error',{
+                message:error
+            },signUpForm);
         })
 
         if (errors.length ===0){
-            await createUser(email.value, password.value);
-            alert('Usuario creado correctamente');
+            try {
+                await createUser(email.value, password.value);
+            triggerEvent('signup-success',{
+                message: 'El registro ha sido correcto'
+            }, signUpForm);
             setTimeout(() => {
                 window.location.href = 'index.html';
               }, 4000);
+            } catch (error) {
+                triggerEvent('signup-error',{
+                    message:error
+                },signUpForm);
+            }
+            
         }
 }

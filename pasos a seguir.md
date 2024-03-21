@@ -63,3 +63,6 @@ creamos una pagina de registro de usuarios con sus validacions
 creamos una pagina de login de usuarios
 
 document.addEventListener('DOMContentLoaded' accedemos al DOm cuando ya estan todos los contenidos cargados
+
+añadir un trigger event para poder utilizarlo como creador de eventos
+cambiamos los alert del por los notifications controller y en los js princip
