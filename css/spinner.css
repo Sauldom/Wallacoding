@@ -1,7 +1,9 @@
  .lds-ellipsis.hidden{
   display:none;
  }
-
+button{
+  align-self:center;
+}
  .lds-ellipsis{
     display: inline-block;
     position: relative;

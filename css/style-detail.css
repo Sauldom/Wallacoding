@@ -2,14 +2,15 @@
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #b59b9b;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #f7f5f5;
 }
 h1, p{
     text-align: center;
 }
+
 .detail-name {
     font-size: 24px;
     font-weight: bold;

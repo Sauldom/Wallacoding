@@ -13,18 +13,27 @@ export async function detailController(adDetail){
    if (!adId){
     window.location.href = './index.html'
    }
+
+   backButton(adDetail);
    try {
     showSpinner();
     const detail = await getDetail(adId);
-    console.log(detail);
-    adDetail.innerHTML=drawDetail(detail);
+    const container = adDetail.querySelector('#container')
+    container.innerHTML=drawDetail(detail);
     
    } catch (error) {
-    
+    throw new Error(error);
    }finally{
     hideSpinner();
+    
    }
    
+
+
+   function backButton(adDetail){
+    const backButton = adDetail.querySelector('#back');
+    backButton.addEventListener('click',()=>{window.history.back()}) 
+   }
 }
 
 //mostrar datos del tweet
