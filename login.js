@@ -14,11 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         event.stopPropagation();
     })
 
-   /* loginForm.addEventListener('LoginUser-success',(event)=>{
-        showNotification(event.detail.message);        
-        event.stopPropagation();
-    })
-    */
+   
     loginController(loginForm);
 
 })

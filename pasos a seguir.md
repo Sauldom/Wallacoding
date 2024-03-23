@@ -65,4 +65,10 @@ creamos una pagina de login de usuarios
 document.addEventListener('DOMContentLoaded' accedemos al DOm cuando ya estan todos los contenidos cargados
 
 añadir un trigger event para poder utilizarlo como creador de eventos
-cambiamos los alert del por los notifications controller y en los js princip
+cambiamos los alert del por los notifications controller y en los js principales
+
+cremamos un spinner controller y view para usarlo en todas las vistas de html
+podemos en este caso "saltarnos" el modelo vista controlador y no acoplar los distintos
+controladores a traves del controlador principal
+si hacer un controlador dependiente de otro el nodo tiene que estar dentro del nodo 
+que es controlado, sino tenemos que ir a document

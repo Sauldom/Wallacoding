@@ -1,3 +1,4 @@
+import { spinnerController } from "../spinner/spinner-controller.js";
 import { triggerEvent } from "../util/triggerEvent.js";
 import { getAds } from "./ads-model.js";
 import { buildAd } from "./ads-view.js";
@@ -6,9 +7,10 @@ import { buildAd } from "./ads-view.js";
 
 
 export async function renderAds(adsList){
-    const spinner = adsList.querySelector('.lds-ellipsis');
-    spinner.classList.toggle('hidden');
+    const spinner = adsList.querySelector('.lds-ellipsis.hidden');
+    const {showSpinner, hideSpinner} = spinnerController(spinner);
     try {
+        showSpinner();
         const ads = await getAds();
 
     ads.forEach(ad => {
@@ -22,9 +24,12 @@ export async function renderAds(adsList){
                 message:errorMes,
                 type:'error'            
         },adsList)
+    }finally{
+        hideSpinner();
+
     }
     
-    //spinner.classList.toggle('hidden');
+    
 };
 
 

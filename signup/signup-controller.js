@@ -1,8 +1,9 @@
+import { spinnerController } from "../spinner/spinner-controller.js";
 import { triggerEvent } from "../util/triggerEvent.js";
 import { createUser} from "./signup-model.js";
 
 export function signUpController(signUpForm){
-
+    
     signUpForm.addEventListener('submit',(event)=>{
         event.preventDefault();
         createOrNotCreateUser(signUpForm)
@@ -23,6 +24,9 @@ function validatePass(signUpForm){
 }
 
 async function createOrNotCreateUser(signUpForm){
+    const spinner = signUpForm.querySelector('.lds-ellipsis.hidden');
+    const {showSpinner, hideSpinner} = spinnerController(spinner);
+
     let errors=[];        
         
         if(!validateEmail(signUpForm)){
@@ -40,6 +44,7 @@ async function createOrNotCreateUser(signUpForm){
 
         if (errors.length ===0){
             try {
+                showSpinner();
                 await createUser(email.value, password.value);
             triggerEvent('signup-success',{
                 message: 'El registro ha sido correcto'
@@ -51,6 +56,8 @@ async function createOrNotCreateUser(signUpForm){
                 triggerEvent('signup-error',{
                     message:error
                 },signUpForm);
+            }finally{
+                hideSpinner();
             }
             
         }

@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/css/style-notifications.css">
+    <link rel="stylesheet" href="/css/spinner.css">
 </head>
 <body>
   <script type="module" src="login.js"></script>
     <h1>Logueate en Wallacoding</h1>
     <section class="notifications"></section>
+    
     <form id="login-form">
-        
+      
+      <br>
         <label for="email">Email</label>
         <input type="text" id="email" required />
   
@@ -22,6 +25,8 @@
         <br />
         <br />
         <button type="submit">Login</button>
+        <br>
+        <section class="lds-ellipsis hidden"></section>
       </form>
 </body>
 </html>

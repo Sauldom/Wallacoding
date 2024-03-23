@@ -1,23 +1,26 @@
-import { triggerEvent } from "../util/triggerEvent.js";
+import { spinnerController } from "../spinner/spinner-controller.js";
 import { loginUser } from "./login-model.js";
 
-export function loginController(loginForm){
-    loginForm.addEventListener('submit',(event)=>{
-        event.preventDefault();
-        
-        handleUser(loginForm);
-        
+export const loginController=(loginForm)=>{
 
+    
+
+    loginForm.addEventListener('submit',(event)=>{
+        event.preventDefault();        
+        handleUser(loginForm);     
     })
 }
 
-async function handleUser (loginForm){
+const handleUser = async (loginForm)=>{
+    const spinner = loginForm.querySelector('.lds-ellipsis.hidden');
+    const {showSpinner, hideSpinner} = spinnerController(spinner);
     const email = loginForm.querySelector ('#email');
     const password = loginForm.querySelector ('#password');
+
     try{
-        
+        showSpinner();
         const jwtToken = await loginUser(email.value, password.value);
-        alert('Usuario Creado')        
+        alert('Usuario validado')        
         localStorage.setItem('token', jwtToken);
        
         window.location="./index.html";
@@ -26,7 +29,7 @@ async function handleUser (loginForm){
             message:error
         },loginForm) 
     }finally{
-        triggerEvent('finishLog', null, loginForm)
+        hideSpinner();
     }
     
 }
