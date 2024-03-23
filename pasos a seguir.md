@@ -72,3 +72,9 @@ podemos en este caso "saltarnos" el modelo vista controlador y no acoplar los di
 controladores a traves del controlador principal
 si hacer un controlador dependiente de otro el nodo tiene que estar dentro del nodo 
 que es controlado, sino tenemos que ir a document
+
+si te sale undefines y estan todos los selectores bien
+ES QUE NO HAS PUESTO EL RETURN EN ALGUNA FUNCION COMO EN EL VIEW!!!
+
+construimos un controlador de logeado que tenga botones de cerrar sesion o de login y registro
+que nos lleven a sus respectivas paginas
