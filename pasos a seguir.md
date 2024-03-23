@@ -78,3 +78,16 @@ ES QUE NO HAS PUESTO EL RETURN EN ALGUNA FUNCION COMO EN EL VIEW!!!
 
 construimos un controlador de logeado que tenga botones de cerrar sesion o de login y registro
 que nos lleven a sus respectivas paginas
+
+añadimos un minimo css y un devolver un mensaje cuando la lista de anuncios esta vacia
+
+nos ponemos con el detalle
+para conseguir los datos que enviamos desde la url
+const params=  new URLSearchParams(window.location.search);
+   const adId = params.get('adId');
+
+don el params.get(es el nombre que le hemos puesto a enviar a la variable en VIEW de los ads
+que es donde conseguimos los datos desde la base de datos) 
+
+importante controlar que no entren de manera manual  si entrar sin parametro lo devolvemos a
+la pagina de index

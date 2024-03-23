@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const adsList = document.querySelector('.ads-list ');
   const adsNotifications = document.querySelector('.notifications');
   const loggedin= document.querySelector('#logged');
-  console.log(loggedin);
-  debugger;
+ 
+  
   loggedControl(loggedin);
   const { showNotification }  = notificationController(adsNotifications);
 
