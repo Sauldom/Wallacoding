@@ -9,5 +9,5 @@ export const drawNotLogged = ()=>{
 }
 
 export const drawLogged = ()=>{
-    return `<button>Cerrar sesión</button> <a href="./create-ad.html">Crear anuncio</a>`
+    return `<button>Cerrar sesión</button> <a class="link-create-ad"href="./create-ad.html">Crear anuncio</a>`
 }

@@ -1,15 +1,45 @@
-img{
-    width: 200ppx;
-    height: 200px;
+.img-ad{
+    max-width: 150px;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 5px;
 }
-.ad-list{
+.ads-list{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around; 
-     align-items: center;
+    align-items: flex-start;
+    gap:2rem;
 }
 .contenedor-ad{
-    padding: 20px;
-    border: 1px solid black;
+    width: 300px; 
+    height: 400px;   
+    margin-bottom: 2rem;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   
+    overflow: hidden;
+}
+.ad-link{
     
+    text-decoration: none;
+    color:black;
+}
+
+.link-create-ad{
+    text-decoration: none;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logged{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }

@@ -1,7 +1,7 @@
 import { spinnerController } from "../spinner/spinner-controller.js";
 import { triggerEvent } from "../util/triggerEvent.js";
 import { getAds } from "./ads-model.js";
-import { buildAd } from "./ads-view.js";
+import { buildAd, buildEmptyList } from "./ads-view.js";
 
 
 
@@ -12,13 +12,17 @@ export async function renderAds(adsList){
     try {
         showSpinner();
         const ads = await getAds();
-
-    ads.forEach(ad => {
-        const adItem=document.createElement('div');
-        adItem.className='contenedor-ad';
-        adItem.innerHTML = buildAd(ad);
-        adsList.appendChild(adItem);
-    })
+        if(ads.length >0){
+            ads.forEach(ad => {
+                        const adItem=document.createElement('div');
+                        adItem.className='contenedor-ad';
+                        adItem.innerHTML = buildAd(ad);
+                        adsList.appendChild(adItem);
+        })
+        }else{
+            renderEmptyList(adsList)
+        }
+        
     } catch (errorMes) {
         triggerEvent('error-loading-ads', {            
                 message:errorMes,
@@ -31,7 +35,9 @@ export async function renderAds(adsList){
     
     
 };
-
+function renderEmptyList(adsList){
+    adsList.innerHTML= buildEmptyList();
+}
 
 
 
