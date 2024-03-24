@@ -101,3 +101,7 @@ creado pero falta ver com meter el author, meter el spinner evitar que se metan 
 si no estan logeados
 
 de momento creo un author a la espera de que me de tiempo  a decodificar el jwt
+
+implementado el author con el correo
+creado el mvc de borrado de errores con el boton que se desactiva o activa segun el login
+y ocn notificaciones y manejo de errores

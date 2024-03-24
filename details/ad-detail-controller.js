@@ -45,26 +45,27 @@ export async function detailController(adDetail){
       const token = localStorage.getItem('token');
       const userData = await getUserData(token);
 
-      if (detail.Id === userData.id) {
+      if (detail.userId === userData.id && userData.id!== undefined) {
+         
          const removeAdButton = adDetail.querySelector('#remove-ad-Button');
          removeAdButton.removeAttribute('disabled');
          removeAdButton.addEventListener('click', () => { removeAd(detail.id, token)})
       }
    }
    async function removeAd(detailId, token) {
-      if (window.confirm('Seguro que quieres borrar el tweet?')) {
+      if (window.confirm('Seguro que quieres borrar el anuncio?')) {
         try {
           await deleteAd(detailId, token);
           triggerEvent('remove-ad-success',{
-            message:'se ha quitado el anuncio correctamente';
-          },detailId);
+            message:'se ha quitado el anuncio correctamente'
+          },adDetail);
           setTimeout(() => {
             window.location.href = 'index.html'
           }, 2000);
         } catch (error) {
-         triggerEvent('remove-ad-error',{
-            message:error
-          },detailId);
+            triggerEvent('remove-ad-error',{
+               message:error
+          },adDetail);
         }
       }
     }

@@ -1,4 +1,5 @@
 import { detailController } from "./details/ad-detail-controller.js";
+import {notificationController} from "./notification-ads/notification-controller.js"
 
 
 document.addEventListener ('DOMContentLoaded', ()=>{

@@ -6,7 +6,8 @@ function parseAds(data) {
       description: data.description,
       price: data.price,
       buy: (data.buy ? 'Compra': 'Venta'),
-      photo: data.photo      
+      photo: data.photo,
+      userId:data.userId      
     }
   }
 
@@ -22,9 +23,9 @@ export async function getDetail(adId){
         throw new Error('Hay un error al obtener los anuncios');
     }
 }
-function parseUser(user) {
+function parseUser(data) {
   return {
-    username: user.id
+    id: data.id
   }
 }
 export async function getUserData(token) {
