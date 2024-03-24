@@ -1,0 +1,128 @@
+{
+  "ads": [
+    {
+      "author": "prueba1",
+      "id": 0,
+      "name": "anuncioprueba1",
+      "description": "descripcion de prueba1",
+      "price": 100,
+      "buy": true,
+      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710592282/wallaimg/dinosaurio_rc1rkr.jpg"
+    },
+    {
+      "author": "prueba2",
+      "id": 1,
+      "name": "anuncioprueba2",
+      "description": "descripcion de prueba2",
+      "price": 200,
+      "buy": false,
+      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710604055/wallaimg/ejss1i1kubpih78hnq9j.jpg"
+    },
+    {
+      "author": "prueba3",
+      "id": 2,
+      "name": "anuncioprueba3",
+      "description": "descripcion de prueba3",
+      "price": 300,
+      "buy": true,
+      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710604054/wallaimg/s2tlyowpdfgefwvvihwm.jpg"
+    },
+    {
+      "author": "prueba4",
+      "id": 3,
+      "name": "anuncioprueba4",
+      "description": "descripcion de prueba4",
+      "price": 400,
+      "buy": false,
+      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710604054/wallaimg/afsjzuci74hmergpacly.jpg"
+    },
+    {
+      "name": "pruebacreacion555",
+      "description": "555555",
+      "price": "555",
+      "buy": "Compra",
+      "photo": "https://www.juguetesonline.com/5627-large_default/motor-town-green-set-2-coches-deportivos-cluz-y-sonido.jpg",
+      "userId": 2,
+      "updatedAt": "2024-03-24T07:55:21.608Z",
+      "id": 10
+    },
+    {
+      "name": "sdsd",
+      "description": "asdasdasd",
+      "price": "333",
+      "buy": "Compra",
+      "photo": "https://www.juguetesonline.com/5627-large_default/motor-town-green-set-2-coches-deportivos-cluz-y-sonido.jpg",
+      "userId": 2,
+      "updatedAt": "2024-03-24T08:03:08.191Z",
+      "id": 11
+    },
+    {
+      "author": "prueba1@prueba1.com",
+      "name": "creacion1",
+      "description": "creacion1",
+      "price": "111",
+      "buy": "Venta",
+      "photo": "https://www.rollersinline.com/15720-home_default/stick-fischer-rc-one-is2-jr-abs-2324.jpg",
+      "userId": 1,
+      "updatedAt": "2024-03-24T10:39:14.710Z",
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "username": "prueba1@prueba1.com",
+      "password": "$2b$10$B0mbbemZCxIJXBYmwHvYS.WBWRw6BI4tl7RTL/nbN8v8XcK3wa0ga",
+      "id": 1
+    },
+    {
+      "username": "prueba2@prueba2.com",
+      "password": "$2b$10$B0mbbemZCxIJXBYmwHvYS.WBWRw6BI4tl7RTL/nbN8v8XcK3wa0ga",
+      "id": 2
+    },
+    {
+      "username": "aidatv@yahoo.es",
+      "password": "$2b$10$B0mbbemZCxIJXBYmwHvYS.l0Enw547i.nZy1PPeeY7lLIeXUf4A9S",
+      "id": 3
+    },
+    {
+      "username": "aidatv@yahoo.e",
+      "password": "$2b$10$B0mbbemZCxIJXBYmwHvYS.WBWRw6BI4tl7RTL/nbN8v8XcK3wa0ga",
+      "id": 4
+    },
+    {
+      "username": "prueba3@prueba3.com",
+      "password": "$2b$10$B0mbbemZCxIJXBYmwHvYS..HhwOX9BuRp/laXWks1qRtL6PHwKagS",
+      "id": 5
+    },
+    {
+      "username": "prueba5@prueba5.com",
+      "password": "$2b$10$B0mbbemZCxIJXBYmwHvYS.z1mmilC0tyaDdKuJJCTQwMnuQuDqIu.",
+      "id": 6
+    },
+    {
+      "username": "prueba8@prueba8.com",
+      "password": "$2b$10$t11LwqWiVUHT2ApM1B82vuRN8goMndLZ8qjP35QO0dvoyVLrzpNX2",
+      "id": 7
+    },
+    {
+      "username": "prueba9@prueba1.com",
+      "password": "$2b$10$t11LwqWiVUHT2ApM1B82vuRN8goMndLZ8qjP35QO0dvoyVLrzpNX2",
+      "id": 8
+    },
+    {
+      "username": "prueba10@prueba10.com",
+      "password": "$2b$10$GOJNgHrQfQCqLty6mtQDkOU1z4mJfwbzUksBQBpHA0deAqP5iSgfy",
+      "id": 9
+    },
+    {
+      "username": "prueba12@prueba12.com",
+      "password": "$2b$10$GOJNgHrQfQCqLty6mtQDkOU1z4mJfwbzUksBQBpHA0deAqP5iSgfy",
+      "id": 10
+    },
+    {
+      "username": "prueba13@prueba13.com",
+      "password": "$2b$10$GOJNgHrQfQCqLty6mtQDkOU1z4mJfwbzUksBQBpHA0deAqP5iSgfy",
+      "id": 11
+    }
+  ]
+}
