@@ -66,39 +66,6 @@
       "userId": 1,
       "updatedAt": "2024-03-24T10:39:14.710Z",
       "id": 12
-    },
-    {
-      "author": "saul1@saul1.com",
-      "name": "anunciosaul1",
-      "description": "anuncios saul1 descripcion",
-      "price": "12",
-      "buy": "Venta",
-      "photo": "https://www.rollersinline.com/15719-home_default/stick-fischer-rc-one-is1-sr.jpg",
-      "userId": 12,
-      "updatedAt": "2024-03-24T11:12:40.445Z",
-      "id": 13
-    },
-    {
-      "author": "saul1@saul1.com",
-      "name": "pruebacreacion4",
-      "description": "prueba4",
-      "price": "44",
-      "buy": "Compra",
-      "photo": "",
-      "userId": 12,
-      "updatedAt": "2024-03-24T11:41:25.002Z",
-      "id": 14
-    },
-    {
-      "author": "saul1@saul1.com",
-      "name": "anuncios sin foto",
-      "description": "anuncio sin foto",
-      "price": "44",
-      "buy": "Venta",
-      "photo": "",
-      "userId": 12,
-      "updatedAt": "2024-03-24T11:42:03.300Z",
-      "id": 15
     }
   ],
   "users": [
@@ -156,11 +123,6 @@
       "username": "prueba13@prueba13.com",
       "password": "$2b$10$GOJNgHrQfQCqLty6mtQDkOU1z4mJfwbzUksBQBpHA0deAqP5iSgfy",
       "id": 11
-    },
-    {
-      "username": "saul1@saul1.com",
-      "password": "$2b$10$Z9TROlJR6f9IdEg5nSKj3.DxNDGJTEfTKyMkqscu2oG5bS8Fw0tau",
-      "id": 12
     }
   ]
 }

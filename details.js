@@ -19,6 +19,11 @@ document.addEventListener ('DOMContentLoaded', ()=>{
         showNotification (event.detail.message);        
         event.stopPropagation();
     })
+    adDetail.addEventListener('Error-data-user-load', (event)=>{
+        
+        showNotification (event.detail.message);        
+        event.stopPropagation();
+    })
 
     detailController(adDetail);
 })

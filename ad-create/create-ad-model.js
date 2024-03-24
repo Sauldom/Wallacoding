@@ -4,6 +4,7 @@ export async function createAd(formData){
     const token = localStorage.getItem('token');
     
     const data = await getUserData(token);
+    
     const body = {
         author:data.username,
         name:formData.get("name"),

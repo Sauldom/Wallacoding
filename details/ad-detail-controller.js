@@ -43,7 +43,15 @@ export async function detailController(adDetail){
 
    async function handleRemoveAdButton(adDetail,detail){
       const token = localStorage.getItem('token');
-      const userData = await getUserData(token);
+      try {
+        const userData = await getUserData(token);
+        
+      } catch (error) {
+        triggerEvent('Error-data-user-load',{
+          message:'error cargando los datos'
+        },adDetail)
+      }
+      
 
       if (detail.userId === userData.id && userData.id!== undefined) {
          
