@@ -2,6 +2,13 @@ import { createAdController } from "./ad-create/create-ad-controller.js";
 import { notificationController } from "./notification-ads/notification-controller.js";
 
 document.addEventListener('DOMContentLoaded',()=>{
+
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      window.location.href = 'index.html'
+    }
+    
     const creationAd= document.querySelector('#create-ad');  
     const signNotifications = document.querySelector('.notifications');  
 
