@@ -99,3 +99,5 @@ crear un MVC para crear anuncios
 
 creado pero falta ver com meter el author, meter el spinner evitar que se metan en la web
 si no estan logeados
+
+de momento creo un author a la espera de que me de tiempo  a decodificar el jwt

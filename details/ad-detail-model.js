@@ -22,3 +22,42 @@ export async function getDetail(adId){
         throw new Error('Hay un error al obtener los anuncios');
     }
 }
+function parseUser(user) {
+  return {
+    username: user.id
+  }
+}
+export async function getUserData(token) {
+  const url = 'http://localhost:8000/auth/me';
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    const data = await response.json();
+    return parseUser(data);
+  } catch (error) {
+    throw new Error('Error datos del usuario')
+  }
+}
+
+export async function deleteAd(detailId, token) {
+  const url = `http://localhost:8000/api/ads/${detailId}`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    if (!response.ok) {
+      const data = await response.json()
+      throw new Error(data.message);
+    }
+  } catch (error) {
+    throw new Error('Error borrando anuncio');
+  }
+}

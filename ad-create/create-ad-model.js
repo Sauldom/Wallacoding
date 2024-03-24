@@ -2,8 +2,10 @@
 export async function createAd(formData){
     const url = `http://localhost:8000/api/ads`;
     const token = localStorage.getItem('token');
-
+    
+    const data = await getUserData(token);
     const body = {
+        author:data.username,
         name:formData.get("name"),
         description:formData.get("description"),
         price:formData.get("price"),
@@ -32,3 +34,25 @@ export async function createAd(formData){
             }
         }
 }
+
+function parseAuthor(data) {
+    return {
+      username: data.username
+    }
+  }
+
+export async function getUserData(token) {
+    const url = 'http://localhost:8000/auth/me';
+  
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      const data = await response.json();
+      return parseAuthor(data);
+    } catch (error) {
+      throw new Error('Error datos del usuario')
+    }
+  }

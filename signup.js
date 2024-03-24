@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const { showNotification }  = notificationController(signNotifications);
 
     signUpForm.addEventListener('signup-error', (event)=>{
-        console.log(event);
+      
         showNotification (event.detail.message);        
         event.stopPropagation();
     })
     signUpForm.addEventListener('signup-success', (event)=>{
-        console.log(event);
+      
         showNotification (event.detail.message);        
         event.stopPropagation();
     })
