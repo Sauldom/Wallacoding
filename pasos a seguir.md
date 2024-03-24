@@ -91,3 +91,11 @@ que es donde conseguimos los datos desde la base de datos)
 
 importante controlar que no entren de manera manual  si entrar sin parametro lo devolvemos a
 la pagina de index
+
+colocar un boton de volver atras en los detalles del anuncio
+
+crear un MVC para crear anuncios
+
+
+creado pero falta ver com meter el author, meter el spinner evitar que se metan en la web
+si no estan logeados
