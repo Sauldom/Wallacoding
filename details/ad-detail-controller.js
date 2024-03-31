@@ -48,7 +48,7 @@ export async function detailController(adDetail){
         
       } catch (error) {
         triggerEvent('Error-data-user-load',{
-          message:'error cargando los datos'
+          message:'No estas logeado'
         },adDetail)
       }
       

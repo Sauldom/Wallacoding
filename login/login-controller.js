@@ -1,5 +1,6 @@
 import { spinnerController } from "../spinner/spinner-controller.js";
 import { loginUser } from "./login-model.js";
+import { triggerEvent } from "../util/triggerEvent.js";
 
 export const loginController=(loginForm)=>{
     const spinner = loginForm.querySelector('.lds-ellipsis.hidden');
@@ -24,7 +25,7 @@ export const loginController=(loginForm)=>{
             window.location="./index.html";
         } catch(error){
             triggerEvent('login-error',{
-                message:error
+                message:'error al logear el usuario'
             },loginForm) 
         }finally{
             hideSpinner();
