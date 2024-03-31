@@ -15,12 +15,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     const { showNotification }  = notificationController(signNotifications);
 
     creationAd.addEventListener('create-ad-error', (event)=>{
-        console.log(event);
         showNotification (event.detail.message);        
         event.stopPropagation();
     })
     creationAd.addEventListener('create-ad-success', (event)=>{
-        console.log(event);
         showNotification (event.detail.message);        
         event.stopPropagation();
     })

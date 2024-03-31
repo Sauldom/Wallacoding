@@ -23,6 +23,7 @@ export async function detailController(adDetail){
    try {
     showSpinner();
     const detail = await getDetail(adId);
+    console.log(detail);
     handleRemoveAdButton(adDetail,detail);
     const container = adDetail.querySelector('#container')
     container.innerHTML=drawDetail(detail);
@@ -48,7 +49,7 @@ export async function detailController(adDetail){
         
       } catch (error) {
         triggerEvent('Error-data-user-load',{
-          message:'No estas logeado'
+          message:'No estas logeado con este usuario'
         },adDetail)
       }
       

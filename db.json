@@ -1,42 +1,6 @@
 {
   "ads": [
     {
-      "author": "prueba1",
-      "id": 0,
-      "name": "anuncioprueba1",
-      "description": "descripcion de prueba1",
-      "price": 100,
-      "buy": true,
-      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710592282/wallaimg/dinosaurio_rc1rkr.jpg"
-    },
-    {
-      "author": "prueba2",
-      "id": 1,
-      "name": "anuncioprueba2",
-      "description": "descripcion de prueba2",
-      "price": 200,
-      "buy": false,
-      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710604055/wallaimg/ejss1i1kubpih78hnq9j.jpg"
-    },
-    {
-      "author": "prueba3",
-      "id": 2,
-      "name": "anuncioprueba3",
-      "description": "descripcion de prueba3",
-      "price": 300,
-      "buy": true,
-      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710604054/wallaimg/s2tlyowpdfgefwvvihwm.jpg"
-    },
-    {
-      "author": "prueba4",
-      "id": 3,
-      "name": "anuncioprueba4",
-      "description": "descripcion de prueba4",
-      "price": 400,
-      "buy": false,
-      "photo": "https://res.cloudinary.com/dfflnp4hs/image/upload/v1710604054/wallaimg/afsjzuci74hmergpacly.jpg"
-    },
-    {
       "name": "pruebacreacion555",
       "description": "555555",
       "price": "555",

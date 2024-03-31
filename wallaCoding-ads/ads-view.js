@@ -3,7 +3,6 @@ export function buildAd(ad){
     return `
     <a class="ad-link" href='ad-detail.html?adId=${ad.id}'>
     <p>${ad.name}</p>
-    <p>Creado por: ${ad.handler}</p>
     <br>
     <img class="img-ad"src="${ad.photo}"></img>
     <p>${ad.description}</p>
