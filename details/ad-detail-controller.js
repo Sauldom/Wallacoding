@@ -45,11 +45,8 @@ export async function detailController(adDetail){
    async function handleRemoveAdButton(adDetail,detail){
       const token = localStorage.getItem('token');
       
-        const userData = await getUserData(token);
-        
-      
-      
-        
+        const userData = await getUserData(token);      
+                  
       if (detail.userId === userData.userId && userData.userId!== undefined) {
          
          const removeAdButton = adDetail.querySelector('#remove-ad-Button');
