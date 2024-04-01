@@ -1,5 +1,13 @@
 # Wallacoding
 
+
+
+## Corregido 
+* Si introduzco credenciales erróneas en el formulario de login, no informas al usuario.
+* Para acceder al detalle del anuncio, sólo puedo hacerlo si hago click en la imagen. Por tanto, si creo un producto sin imagen, no puedo acceder al detalle
+* No puedo borrar un anuncio que he creado.
+
+
 ## En el fichero pasos a seguir
 
 He puesto un poco el camino que he seguido y algunos recordatorios para cuando revisite el codigo
