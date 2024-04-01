@@ -25,7 +25,7 @@ export async function getDetail(adId){
 }
 function parseUser(user) {
   return {
-    id: user.id
+    userId:data.id
   }
 }
 export async function getUserData(token) {
@@ -41,7 +41,7 @@ export async function getUserData(token) {
     
     return parseUser(data)
   } catch (error) {
-    throw new Error('Error al identificar datos del usuario')
+    throw new Error('Error datos del usuario o no estas logeado')
   }
 }
 

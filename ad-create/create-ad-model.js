@@ -33,3 +33,24 @@ export async function createAd(formData){
         }
 }
 
+function parseAuthor(data) {
+    return {
+      username: data.username,      
+    }
+  }
+
+export async function getUserData(token) {
+    const url = 'http://localhost:8000/auth/me';
+  
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      const data = await response.json();
+      return parseAuthor(data);
+    } catch (error) {
+      throw new Error('Error datos del usuario')
+    }
+  }
