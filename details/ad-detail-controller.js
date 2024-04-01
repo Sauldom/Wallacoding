@@ -23,7 +23,7 @@ export async function detailController(adDetail){
    try {
     showSpinner();
     const detail = await getDetail(adId);
-    console.log(detail);
+    
     handleRemoveAdButton(adDetail,detail);
     const container = adDetail.querySelector('#container')
     container.innerHTML=drawDetail(detail);
@@ -44,22 +44,18 @@ export async function detailController(adDetail){
 
    async function handleRemoveAdButton(adDetail,detail){
       const token = localStorage.getItem('token');
-      try {
+      
+      if(!token){
+        return
+      }
         const userData = await getUserData(token);
         
-      } catch (error) {
-        triggerEvent('Error-data-user-load',{
-          message:'No estas logeado con este usuario'
-        },adDetail)
-      }
-      
-
-      if (detail.userId === userData.id && userData.id!== undefined) {
+        if (detail.userId === userData.id) {
          
          const removeAdButton = adDetail.querySelector('#remove-ad-Button');
          removeAdButton.removeAttribute('disabled');
          removeAdButton.addEventListener('click', () => { removeAd(detail.id, token)})
-      }
+      }                  
    }
    async function removeAd(detailId, token) {
       if (window.confirm('Seguro que quieres borrar el anuncio?')) {

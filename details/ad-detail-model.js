@@ -6,7 +6,7 @@ function parseAds(data) {
       price: data.price,
       buy: (data.buy ? 'Compra': 'Venta'),
       photo: data.photo,
-      userId:ad.userId      
+      userId:data.userId      
     }
   }
 
@@ -16,7 +16,7 @@ export async function getDetail(adId){
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data)
+        
         const ads=parseAds(data);
         return ads;
     } catch (error) {
@@ -29,8 +29,8 @@ function parseUser(user) {
   }
 }
 export async function getUserData(token) {
-  const url = 'http://localhost:8000/auth/me';
-
+  const url = `http://localhost:8000/auth/me`;
+  
   try {
     const response = await fetch(url, {
       headers: {
@@ -38,9 +38,10 @@ export async function getUserData(token) {
       }
     });
     const data = await response.json();
-    return parseUser(data);
+    
+    return parseUser(data)
   } catch (error) {
-    throw new Error('Error datos del usuario')
+    throw new Error('Error al identificar datos del usuario')
   }
 }
 
